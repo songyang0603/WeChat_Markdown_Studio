@@ -7,6 +7,9 @@ const currentDir = fileURLToPath(new URL('.', import.meta.url));
 const rootDir = resolve(currentDir, '..', '..');
 
 export default defineConfig({
+  // 👇 如果你的仓库名是 my-repo,则设置为 '/my-repo/'
+  base: process.env.GITHUB_PAGES ? '/WeChat_Markdown_Studio/' : '/',
+  
   plugins: [react()],
   resolve: {
     alias: {
@@ -18,5 +21,9 @@ export default defineConfig({
   },
   server: {
     port: 5173
+  },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true
   }
 });
