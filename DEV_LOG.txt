@@ -1,0 +1,18 @@
+2025-10-15 14:43: Created project docs folder and drafted initial architecture plan covering mono-repo layout, theme JSON spec, MVP scope, and roadmap.
+2025-10-15 15:05: Scaffolded pnpm mono-repo (apps, packages, configs), added web/app/api placeholders, shared theme and markdown pipeline stubs, baseline README and tooling directories.
+2025-10-15 14:59: Translated architecture plan documentation into Chinese as requested.
+2025-10-15 15:01: Added root eslint.config.mjs to wire shared ESLint configuration after lint command failure surfaced.
+2025-10-15 15:02: Updated root package.json to include @eslint/js and typescript-eslint dependencies required by shared ESLint config.
+2025-10-15 15:03: Adjusted shared ESLint config to resolve per-package tsconfig via projectService and tsconfigRootDir for lint compatibility.
+2025-10-15 15:04: Resolved eslint unused variable warning in markdown pipeline by wiring inlineStyles placeholder logic.
+2025-10-15 15:05: Updated Vitest shared config to pass when suites are empty, enabling scaffold stage test command to succeed.
+2025-10-15 15:07: Pointed all workspace Vitest scripts to shared config file for consistent settings across packages.
+2025-10-15 15:16: Expanded theme-engine with行内样式工具（段落/标题/引用/列表/链接），更新示例主题字体书写；将 markdown pipeline 集成主题渲染插件、行内样式、WeChat 友好属性，并引入依赖（unist-util-visit、@types/hast）。
+2025-10-15 15:21: 重构 UI Badge 组件为内联样式，新增 Web Studio App 组件与样式（编辑器/预览/导出/质检），接入主题渲染与质量检查流程。
+2025-10-15 15:30: 新增 warm-note 主题与模板库包，提供两套示例模板；Web Studio 支持主题切换与模板套用；API 输出主题/模板列表并提供渲染预览端点。
+2025-10-15 15:37: 引入 Markdown pipeline 与模板库测试用例，修复行内样式插件注册方式并通过完整 lint/test。
+2025-10-15 15:50: 升级质量检查为 AST 规则（链接协议、图片 alt、本地路径、标题层级、内嵌 HTML），支持预览高亮与问题点击定位，补充单元测试并更新文档说明。
+2025-10-15 16:12: 调整 web-studio Vite 配置为工作区包提供绝对 alias，修复 @ui/core 等本地包在开发环境下解析失败问题。
+2025-10-15 16:43: 统一主题字体可选项（支持 heading/body 自定义），重构 Web Studio 布局（模板分组、质量检查置底）、新增模板 Markdown 复制与质量问题忽略功能、上线主题微调/JSON 导入面板并更新文档。
+2025-10-15 21:01: 新增公众号一键复制功能、模板库搜索与横向卡片布局（含作者/场景信息）、忽略问题持久化与导出、主题字体选择与预设保存、多项 UI 微调；扩展模板字段并更新测试。
+2025-10-15 22:17: 引入 huasheng_editor 样式灵感：增强 Markdown 表格/代码块渲染（圆角、渐变表头、暗色代码面板），新增技术蓝谱与媒体雅致主题及对应模板，自测 lint/test 通过。

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@theme-engine/*": ["packages/theme-engine/src/*"],
+      "@markdown-pipeline/*": ["packages/markdown-pipeline/src/*"],
+      "@ui/*": ["packages/ui/src/*"],
+      "@template-library/*": ["packages/template-library/src/*"]
+    }
+  },
+  "include": ["packages", "apps", "tooling"]
+}

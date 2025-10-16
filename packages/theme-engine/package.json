@@ -1,0 +1,21 @@
+{
+  "name": "@theme-engine/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json --emitDeclarationOnly",
+    "lint": "eslint --ext .ts src",
+    "test": "vitest run --config ../../configs/vitest.config.ts"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.0"
+  }
+}
